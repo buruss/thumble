@@ -8,14 +8,17 @@ import './app.css';
 const App = () => {
   async function handleLoginClick(values: any) {
     console.log('handleLoginClick', values);
+    location.href = 'main.html';
   }
 
   return (
-    <Layout.Content className="main draggable">
+    <Layout.Content className={`${styles.main} main draggable`}>
       <div className={styles.loginForm}>
         <Form
           id="loginForm"
           size="small"
+          action="main.html"
+          method="GET"
           labelCol={{ xs: { span: 14 } }}
           wrapperCol={{ xs: { span: 10 } }}
           onFinish={handleLoginClick}
@@ -30,11 +33,9 @@ const App = () => {
               </Form.Item>
             </Col>
             <Col span={5} style={{ textAlign: 'right' }}>
-              <a href="main.html">
-                <Button type="primary" htmlType="submit" form="loginForm" style={{ width: '100px', height: '62px' }}>
-                  로그인
-                </Button>
-              </a>
+              <Button type="primary" htmlType="submit" form="loginForm" style={{ width: '100px', height: '62px' }}>
+                로그인
+              </Button>
             </Col>
           </Row>
         </Form>
