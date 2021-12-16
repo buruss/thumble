@@ -30,9 +30,11 @@ const App = () => {
               </Form.Item>
             </Col>
             <Col span={5} style={{ textAlign: 'right' }}>
-              <Button type="primary" htmlType="submit" form="loginForm" style={{ width: '100px', height: '62px' }}>
-                로그인
-              </Button>
+              <a href="main.html">
+                <Button type="primary" htmlType="submit" form="loginForm" style={{ width: '100px', height: '62px' }}>
+                  로그인
+                </Button>
+              </a>
             </Col>
           </Row>
         </Form>
