@@ -1,0 +1,1 @@
+webpack --watch --config webpack.dev.js --mode=development --progress --color

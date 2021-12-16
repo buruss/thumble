@@ -1,0 +1,1 @@
+webpack --watch --config webpack.prod.js --mode=production --progress --color

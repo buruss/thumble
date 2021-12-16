@@ -1,0 +1,26 @@
+.main {
+  background-image: url(../static/img/login-bg.png);
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* AntD Form.Item 행 간격 줄임 */
+#loginForm .ant-form-item {
+  margin-bottom: 1em;
+}
+
+/* 입력란과 버튼은 드래그되지 않는 영역 */
+#loginForm label,
+#loginForm input,
+#loginForm button {
+  -webkit-app-region: no-drag;
+}
+
+#loginBar label,
+#loginBar input,
+#loginBar button {
+  -webkit-app-region: no-drag;
+}
