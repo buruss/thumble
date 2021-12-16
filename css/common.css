@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app-root {
+  width: 100vw;
+  height: 100vw;
+}
+
+/* 드래그로 창 이동 */
+.draggable {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}

@@ -1,0 +1,75 @@
+.tab-container p {
+  margin: 0;
+}
+.tab-container > .ant-tabs-card .ant-tabs-content {
+  /* margin-top: -16px; */
+}
+.tab-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+  padding: 16px;
+  background: #fff;
+}
+.tab-container > .ant-tabs-card > .ant-tabs-nav::before {
+  display: none;
+}
+.tab-container > .ant-tabs-card .ant-tabs-tab,
+[data-theme='compact'] .tab-container > .ant-tabs-card .ant-tabs-tab {
+  background: transparent;
+  border-color: transparent;
+}
+.tab-container > .ant-tabs-card .ant-tabs-tab-active,
+[data-theme='compact'] .tab-container > .ant-tabs-card .ant-tabs-tab-active {
+  background: #fff;
+  border-color: #fff;
+}
+#components-tabs-demo-card-top .code-box-demo {
+  padding: 24px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+[data-theme='compact'] .tab-container > .ant-tabs-card .ant-tabs-content {
+  margin-top: -8px;
+}
+[data-theme='dark'] .tab-container > .ant-tabs-card .ant-tabs-tab {
+  background: transparent;
+  border-color: transparent;
+}
+[data-theme='dark'] #components-tabs-demo-card-top .code-box-demo {
+  background: #000;
+}
+[data-theme='dark'] .tab-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+  background: #141414;
+}
+[data-theme='dark'] .tab-container > .ant-tabs-card .ant-tabs-tab-active {
+  background: #141414;
+  border-color: #141414;
+}
+
+/* 단일 셀 grid layout 적용. v-grid 참고 */
+.ant-tabs-content-holder,
+.ant-tabs-content,
+.ant-tabs-tabpane {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 헤더 - 메인 grid layout 적용. v-grid-hm 참고 */
+.ant-tabs {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'main';
+}
+
+.ant-tabs-nav {
+  grid-area: header;
+  margin-bottom: 0 !important;
+}
+
+.ant-tabs-content-holder {
+  grid-area: main;
+}

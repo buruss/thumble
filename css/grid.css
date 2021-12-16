@@ -1,0 +1,56 @@
+/* header와 footer는 고정하고, main이 최대한 늘어나는 레이아웃 */
+.v-grid-hmf {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.v-grid-hm {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'main';
+}
+
+.v-grid-mf {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    'main'
+    'footer';
+}
+
+.v-grid {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+}
+
+.v-grid-hmf > .header,
+.v-grid-hm > .header {
+  grid-area: header;
+}
+
+.v-grid-hmf > .main,
+.v-grid-hm > .main,
+.v-grid-mf > .main {
+  grid-area: main;
+}
+
+.v-grid-hmf > .footer,
+.v-grid-mf > .footer {
+  grid-area: footer;
+}

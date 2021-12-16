@@ -1,0 +1,58 @@
+/**
+* AntD 테이블이 상하 꽉찬 화면으로 자동 크기 조절 기능을 지원하지 않아서 
+* 이 부분을 grid.css 참고하여 grid 속성을 적용해봄. 
+* Ag-grid를 사용하면서 더 이상 쓰지는 않음.
+*/
+/* 단일 셀 grid layout 적용. v-grid 참고 */
+.ant-table-wrapper,
+.ant-spin-nested-loading,
+.ant-table {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* main - footer 그리드 레이아웃 적용. v-grid-mf 참고 */
+.ant-spin-container {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    'main'
+    'footer';
+}
+
+/* 헤더 - 메인 grid layout 적용. v-grid-hm 참고 */
+.ant-table-container {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'main';
+}
+
+.ant-table,
+.ant-table-body {
+  grid-area: main;
+}
+
+.ant-pagination {
+  grid-area: footer;
+}
+
+.ant-table-header {
+  grid-area: header;
+}
+
+.ant-table-wrapper::before {
+  content: unset !important;
+}
+
+.ant-table-body {
+  overflow: auto auto !important;
+}
