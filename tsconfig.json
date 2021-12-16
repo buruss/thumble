@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "incremental": true,
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "importHelpers": true,
+    "target": "es2017",
+    "strict": true,
+    "strictNullChecks": true,
+    "skipDefaultLibCheck": true,
+    "removeComments": true,
+    "lib": ["ES2021", "esnext.asynciterable", "dom", "dom.iterable"],
+    "typeRoots": ["node_modules/@types", "src/@types"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist", ".webpack"]
+}
