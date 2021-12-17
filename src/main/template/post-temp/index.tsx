@@ -341,7 +341,10 @@ export const PostTemp = () => {
   }
 
   return (
-    <div className="v-grid-hm">
+    <div
+      className="ag-theme-alpine v-grid-hmf"
+      style={{ padding: '2px' /* 입력란 포커스 테두리가 잘리지 않도록 2픽셀 여백 추가*/ }}
+    >
       <Space align="start">
         <Col>
           {/* 검색 필터 입력 폼 */}
@@ -352,36 +355,34 @@ export const PostTemp = () => {
         <Button danger>삭제</Button>
       </Space>
 
-      <div className="ag-theme-alpine v-grid-mf">
-        <AgGridReact
-          defaultColDef={{
-            flex: 1,
-            resizable: true,
-          }}
-          columnDefs={colDefs.map(({ useFilter, filterType, ...colDef }) => colDef)}
-          rowSelection="multiple"
-          frameworkComponents={{
-            CheckboxCellRenderer,
-            NumericCellEditor,
-            CheckboxCellEditor,
-            SelectCellEditor,
-            DateTimeCellEditor,
-            MultiSelectCellEditor,
-            agColumnHeader: HeaderCellRenderer,
-          }}
-          singleClickEdit={true}
-          enterMovesDownAfterEdit={true}
-          stopEditingWhenCellsLoseFocus={true}
-          rowData={posts.items}
-        />
-        <Pagination
-          showSizeChanger
-          current={pageNumber}
-          pageSize={pageSize}
-          total={posts?.totalItems || 0}
-          style={{ textAlign: 'center', paddingTop: '10px' }}
-        />
-      </div>
+      <AgGridReact
+        defaultColDef={{
+          flex: 1,
+          resizable: true,
+        }}
+        columnDefs={colDefs.map(({ useFilter, filterType, ...colDef }) => colDef)}
+        rowSelection="multiple"
+        frameworkComponents={{
+          CheckboxCellRenderer,
+          NumericCellEditor,
+          CheckboxCellEditor,
+          SelectCellEditor,
+          DateTimeCellEditor,
+          MultiSelectCellEditor,
+          agColumnHeader: HeaderCellRenderer,
+        }}
+        singleClickEdit={true}
+        enterMovesDownAfterEdit={true}
+        stopEditingWhenCellsLoseFocus={true}
+        rowData={posts.items}
+      />
+      <Pagination
+        showSizeChanger
+        current={pageNumber}
+        pageSize={pageSize}
+        total={posts?.totalItems || 0}
+        style={{ textAlign: 'center', paddingTop: '10px' }}
+      />
     </div>
   );
 };
